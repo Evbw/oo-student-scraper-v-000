@@ -19,7 +19,6 @@ class Scraper
     student = {}
     
     student_page.css(".vitals-container .social-icon-container a").each do | social |
-      
       if social.attribute("href").value.include?("twitter")
         student[:twitter] = social.attribute("href").value
       elsif social.attribute("href").value.include?("linkedin")
